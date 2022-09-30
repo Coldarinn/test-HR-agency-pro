@@ -1,0 +1,51 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 120%;
+}
+
+body {
+	background-color:#222222;
+	min-height: 100vh;
+	padding: 40px 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, li {
+	list-style: none;
+}
+
+input {
+	background-color: transparent;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+	max-width: 1260px;
+	width: 100%;
+	margin: 0 auto;
+	@media (max-width:$pc){
+		max-width: 1240px;
+	}
+	@media (max-width: $tablet) {
+		max-width: 990px;
+	}
+	@media (max-width: $tabletSmall) {
+		max-width: 100%;
+		padding: 0 15px;
+	}
+}

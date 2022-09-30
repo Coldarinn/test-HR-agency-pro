@@ -1,0 +1,71 @@
+.article {
+	&__title {
+		color: $white;
+		margin-bottom: 40px;
+	}
+	&__text {
+		color: $white;
+		margin-bottom: 30px;
+		padding-bottom: 30px;
+		border-bottom: 2px solid $gray;
+		font-size: 16px;
+		line-height: 1.8;
+	}
+}
+
+.comments-article {
+	&__header {
+		display: flex;
+		align-items: flex-end;
+		margin-bottom: 30px;
+	}
+	&__title {
+		font-weight: 700;
+		font-size: 32px;
+		color: $white;
+		margin-right: 15px;
+		line-height: 1;
+	}
+	&__button {
+		color: $primary;
+		background-color: transparent;
+		border: 1px solid $primary;
+		border-radius: 8px;
+		padding: 5px 20px;
+		font-weight: 700;
+		cursor: pointer;
+		transition: 0.2s linear;
+		@media (any-hover: hover){
+			&:hover{
+				box-shadow: 0 0 5px $primary, 0 0 15px $primary;
+				background-color: $primary;
+				color: $white;
+			}
+		}
+	}
+	&__list {
+		margin-bottom: 50px;
+		transition: 0.2s linear;
+	}
+	&__item {
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+		border-bottom: 1px solid $gray;
+	}
+	&__author {
+		color: $white;
+		font-weight: 500;
+		font-size: 24px;
+		margin-bottom: 10px;
+	}
+	&__text {
+		color: $white;
+		font-size: 16px;
+		line-height: 1.5;
+	}
+	&__empty {
+		text-align: center;
+		font-size: 20px;
+		color: $white;
+	}
+}

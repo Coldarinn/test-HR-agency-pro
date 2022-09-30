@@ -1,0 +1,80 @@
+.form {
+	&.articles__form,
+	&.articles__filter,
+	&.articles__search {
+		margin-bottom: 30px;
+	}
+	&__item {
+		position: relative;
+		padding: 15px 0 0;
+		margin-top: 10px;
+		width: 100%;
+		display: block;
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
+	&__input {
+		font-family: inherit;
+		width: 100%;
+		border: 0;
+		border-bottom: 2px solid $gray;
+		outline: 0;
+		color: $white;
+		padding: 7px 0;
+		background: transparent;
+		transition: border-color 0.2s;
+	 
+		&::placeholder {
+		  color: transparent;
+		}
+	 
+		&:placeholder-shown ~ .form__label {
+		  cursor: text;
+		  top: 20px;
+		}
+
+		&:focus {
+			~ .form__label {
+			  position: absolute;
+			  top: 0;
+			  display: block;
+			  transition: 0.2s;
+			  font-size: 1rem;
+			  color: $primary;
+			  font-weight:700;    
+			}
+			padding-bottom: 6px;  
+			font-weight: 700;
+			border-width: 3px;
+			border-image: linear-gradient(to right, $primary,$secondary);
+			border-image-slice: 1;
+		}
+		&:required,&:invalid { box-shadow:none; }
+	}
+	&__label {
+		position: absolute;
+		top: 0;
+		display: block;
+		transition: 0.2s;
+		font-size: 1rem;
+		color: $gray;
+	}
+	&__button {
+		background-color: transparent;
+		border: 1px solid $primary;
+		color: $primary;
+		font-size: 16px;
+		padding: 5px 10px;
+		border-radius: 8px;
+		cursor: pointer;
+		transition: 0.2s linear;
+		@media (any-hover: hover){
+			&:hover{
+				color: $white;
+				background-color: $primary;
+				box-shadow: 0 0 5px $primary, 0 0 15px $primary;
+			}
+		}
+	}
+}
